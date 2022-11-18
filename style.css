@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header {
+    grid-area: he;
+    text-align: center;
+}
+nav {
+    grid-area: nav;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 10% 10% 10%;
+}
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+}
+nav a:hover {
+    background-color: white;    
+}
+article {
+    grid-area: ar;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+article img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+article>div {
+    background-color: white;
+    border:1px solid gray ;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+aside {
+    grid-area: as;
+    display: grid;
+    background-color: white;
+    border:1px solid gray ;
+    border-radius: 10px;
+    padding: 10px;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+aside button {
+    color: brown;
+}
+footer {
+    grid-area: fo;
+}
+.ar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+}
+.ar p {
+    padding: 0px 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+main {
+    gap: 10px;
+    background-color: lightpink;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "he he"
+    "nav nav"
+    "ar as"
+    "fo fo";
+}
+@media screen and (max-width: 700px) {
+    img {
+        
+    }
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+    nav li {
+        padding: 20px;
+    }
+    article {
+        grid-template-columns: 1fr ;
+    }
+    main {
+        grid-template-areas: "he he"
+    "nav nav"
+    "ar ar"
+    "as as"
+    "fo fo";
+    }
+  }
